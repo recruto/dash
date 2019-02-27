@@ -1,5 +1,7 @@
 # Dash
 
+[![Build Status](https://travis-ci.org/recruto/dash.svg?branch=master)](https://travis-ci.org/recruto/dash)
+
 ## Project setup
 ```
 yarn install
