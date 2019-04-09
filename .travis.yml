@@ -1,0 +1,11 @@
+language: node_js
+node_js: lts/*
+cache: yarn
+script:
+  - yarn lint
+  - yarn build
+deploy:
+  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: MeWyjSnLHXyMtebAxEDViQlMPtJVpI52mIl7luyHpG0RgPCabEZ/oYVOM1RQGcF5ssoHw2sHaYYsZjyICyPKlUOZEtv5ojykmfsp96iG1IxuFmatzVFxL8josHlavTDTitJPmo5kGplo6sE+zvM9eiGNXzXRJc6ssocl+0/nx3BnAk5UK9e/Tj5atVG1HclYubrPXv8ag+G53ItcuwehfBbZ6mLQWldC3PZwogwPxaw5Ljf/nUlWmdxl9acVW50NBC2sabeWdXT4HUTfZagAx+0+JwWRmQcaKd1MyHfaEyOWSRPJiWJ9FimQKdv6zXaz9a287yeJWIC82bF+r+rz5nYOlMOVAGJigKnzDGU9xbgXKMJbQuc/w8gj/cLrwli70cWgOItu/RfaExNNdxS2Fs8v+0fznhglkZV2Xpnrza4waF1GYRfGBjxotiOfH34LeruU7ndhuEpWdoOlJL1OLqvSpGqRqg5NcMw94qTPQnTcIZW60xoePHWpZpSHom2s91cj1YprCQ+BGEKre9bI9nFeV7tdTSLuwj2ywBNOnx8by89OCrpIY6j2FavD0ofR6v1qeokwEPsE2pkYyTm8TTryi5uEPHEC4vXUMhaEl7FK9EePB3qQlrX0FSWKYvSfeaQRUZsG/K1d4N1i5UnuypjFZzLig+My+X3gOzVBFnY=

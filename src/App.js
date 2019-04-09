@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import PrivateRoute from './components/PrivateRoute'
 
 import Login from './views/Login.js'
 import Companies from './views/Companies.js'
@@ -18,9 +19,6 @@ class App extends Component {
         <div>
           <nav>
             <ul>
-              <li>
-                <Link to="/login/">Login</Link>
-              </li>
               <li>
                 <Link to="/">Companies</Link>
               </li>
@@ -41,11 +39,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
 
           <Route exact path="/login/" component={Login} />
-          <Route exact path="/" component={Companies} />
-          <Route exact path="/new-company/" component={NewCompany} />
-          <Route exact path="/company/:id/" component={Company} />
-          <Route exact path="/company/:id/new-position/" component={NewPosition} />
-          <Route exact path="/company/:id/position/:id/" component={Position} />
+          <PrivateRoute exact path="/" component={Companies} />
+          <PrivateRoute exact path="/new-company/" component={NewCompany} />
+          <PrivateRoute exact path="/company/:id/" component={Company} />
+          <PrivateRoute exact path="/company/:id/new-position/" component={NewPosition} />
+          <PrivateRoute exact path="/company/:id/position/:id/" component={Position} />
         </div>
       </Router>
     );
